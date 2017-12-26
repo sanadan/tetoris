@@ -1,9 +1,9 @@
 /*
  現在の盤面の状態を描画する処理
  */
-var canvas = document.getElementsByTagName( 'canvas' )[ 0 ];  // キャンバス
+var canvas = document.getElementById( "main" )  // キャンバス
 var ctx = canvas.getContext( '2d' ); // コンテクスト
-var W = 300, H = 600;  // キャンバスのサイズ
+var W = 200, H = 400;  // キャンバスのサイズ
 var BLOCK_W = W / COLS, BLOCK_H = H / ROWS;  // マスの幅を設定
 
 // x, yの部分へマスを描画する処理
