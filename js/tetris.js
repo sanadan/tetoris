@@ -44,8 +44,8 @@ function newShape() {
     }
   }
   // ブロックを盤面の上のほうにセットする
-  currentX = 5;
-  currentY = 0;
+  currentX = 4 ;
+  currentY = 0 ;
 }
 
 // 盤面を空にする
