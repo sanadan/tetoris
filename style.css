@@ -1,5 +1,10 @@
+body {
+  background: url(material/MSJ_meisai.png)
+}
+
 canvas {
     display: block;
     margin: auto;
     border: 1px solid black;
 }
+
