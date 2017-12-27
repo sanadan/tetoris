@@ -1,0 +1,14 @@
+body {
+  background: url( material/MSJ_meisai.png )
+}
+
+#main {
+  width: 200px ;
+  height: 400px ;
+  margin: auto ;
+}
+
+#board {
+  border: 1px solid black ;
+}
+
