@@ -2,6 +2,14 @@ body {
   background: url( material/MSJ_meisai.png )
 }
 
+#title {
+  text-align: center ;
+}
+
+#start {
+  text-align: center ;
+}
+
 #main {
   width: 200px ;
   height: 400px ;
@@ -10,5 +18,9 @@ body {
 
 #board {
   border: 1px solid black ;
+}
+
+#gameover {
+  text-align: center ;
 }
 
