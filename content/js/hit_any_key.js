@@ -1,4 +1,6 @@
 document.body.onkeydown = function( e ) {
-  window.location = 'game.html' ; 
-};
+  if ( e.key == "Enter" ) {
+    window.location = 'game.html' ;
+  }
+} ;
 

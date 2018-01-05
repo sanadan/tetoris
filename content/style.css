@@ -20,7 +20,11 @@ body {
   border: 1px solid black ;
 }
 
-#gameover {
+#message {
+  position: absolute ;
+  width: 200px ;
   text-align: center ;
+  top: 200px ;
+  font-weight: bold ;
 }
 

@@ -62,6 +62,25 @@ function init() {
 // 操作ブロックを下の方へ動かし、
 // 操作ブロックが着地したら消去処理、ゲームオーバー判定を行う
 function tick() {
+  if (lose) {
+      // もしゲームオーバなら最初から始める
+      //newGame();
+
+    clearInterval(interval);  // ゲームタイマーをクリア
+
+    u( "#message" ).text( "Game over" ) ;
+
+    // キー入力待ち
+    document.body.onkeydown = function( e ) {
+      console.log( e ) ;  // @@@@@
+      if ( e.key == "Enter" ) {
+        window.location = 'index.html' ;
+      }
+    } ;
+
+    return ;
+  }
+
   // １つ下へ移動する
   if ( valid( 0, 1 ) ) {
     ++currentY;
@@ -70,11 +89,7 @@ function tick() {
   else {
     freeze();  // 操作ブロックを盤面へ固定する
     clearLines();  // ライン消去処理
-    if (lose) {
-      // もしゲームオーバなら最初から始める
-      newGame();
-      return false;
-    }
+
     // 新しい操作ブロックをセットする
     newShape();
   }
@@ -131,6 +146,7 @@ function clearLines() {
 
 // キーボードが押された時に呼び出される関数
 function keyPress( key ) {
+  console.log( key ) ;  // @@@@@
   switch ( key ) {
   case 'left':
     if ( valid( -1 ) ) {
@@ -154,6 +170,9 @@ function keyPress( key ) {
       current = rotated;  // 回せる場合は回したあとの状態に操作ブロックをセットする
     }
     break;
+  case 'escape' :
+    lose = true ;
+    break ;
   }
 }
 
@@ -175,7 +194,7 @@ function valid( offsetX, offsetY, newCurrent ) {
              || y + offsetY >= ROWS
              || x + offsetX >= COLS ) {
                if (offsetY == 1 && offsetX-currentX == 0 && offsetY-currentY == 1){
-                 console.log('game over');
+                 console.log('game over');  // @@@@@
                  lose = true; // もし操作ブロックが盤面の上にあったらゲームオーバーにする
                }
                return false;
