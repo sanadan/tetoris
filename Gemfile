@@ -17,6 +17,7 @@ gem 'haml'
 group :nanoc do
   gem 'guard-nanoc'
   gem 'guard-bundler'
-  gem 'guard-livereload'
 end
+
+gem 'foreman'
 
