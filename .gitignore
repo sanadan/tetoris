@@ -1,1 +1,6 @@
 .DS_Store
+/crash.log
+/output
+/tmp
+/node_modules
+

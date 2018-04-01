@@ -1,0 +1,15 @@
+!!!
+%html{ lang: 'ja' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title= "#{@item[:title]}"
+    %meta{ name: 'generator', content: "nanoc #{Nanoc::VERSION} at #{Time.now}" }
+    %meta{ name: 'viewport',  content: 'width=device-width,initial-scale=1' }
+
+    %script( src='lib/umbrella.min.js' )
+    %link( rel='stylesheet' href='style.css' )
+
+  %body
+    #content
+      = yield
+
