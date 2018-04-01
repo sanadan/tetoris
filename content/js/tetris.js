@@ -64,11 +64,10 @@ function init() {
 function tick() {
   if (lose) {
       // もしゲームオーバなら最初から始める
-      //newGame();
 
     clearInterval(interval);  // ゲームタイマーをクリア
 
-    u( "#message" ).text( "Game over" ) ;
+    u( "#message" ).html( "Game over<br>Hit Enter key to restart" ) ;
 
     // キー入力待ち
     document.body.onkeydown = function( e ) {
