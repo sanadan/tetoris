@@ -6,10 +6,20 @@
     %meta{ name: 'generator', content: "nanoc #{Nanoc::VERSION} at #{Time.now}" }
     %meta{ name: 'viewport',  content: 'width=device-width,initial-scale=1' }
 
+    %script( async src="https://www.googletagmanager.com/gtag/js?id=UA-116684706-1" )
     %script( src='lib/umbrella.min.js' )
     %link( rel='stylesheet' href='style.css' )
 
   %body
     #content
       = yield
+
+:javascript
+  // <!-- Global site tag (gtag.js) - Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116684706-1');
+
 
